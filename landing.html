@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexa Commerce — Crie sua loja online e venda mais</title>
+  <meta name="description" content="Nexa Commerce é a plataforma SaaS completa para criar, personalizar e gerenciar sua loja online. Produtos, pedidos, marketing e métricas em um só lugar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public.css" />
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER / NAV PÚBLICO
+       ====================================================================== -->
+  <header class="pub-header header-dark" id="pubHeader" role="banner">
+    <div class="pub-container">
+      <nav class="pub-nav" aria-label="Navegação principal">
+
+        <a href="./landing.html" class="pub-brand" aria-label="Nexa Commerce — Início">
+          <div class="pub-brand-mark" aria-hidden="true">N</div>
+          <div class="pub-brand-info">
+            <strong>Nexa Commerce</strong>
+            <span>Plataforma SaaS</span>
+          </div>
+        </a>
+
+        <ul class="pub-nav-links" role="list">
+          <li><a href="./landing.html" class="active">Início</a></li>
+          <li><a href="./examples.html">Exemplos</a></li>
+          <li><a href="./features.html">Recursos</a></li>
+          <li><a href="./pricing.html">Planos</a></li>
+        </ul>
+
+        <div class="pub-nav-actions">
+          <a href="./login.html" class="pub-btn-login">Entrar</a>
+          <a href="./pricing.html" class="pub-btn-start">Começar agora →</a>
+        </div>
+
+        <button class="pub-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Drawer Mobile -->
+  <div class="pub-mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Menu mobile" aria-modal="true">
+    <nav aria-label="Navegação mobile">
+      <a href="./landing.html">Início</a>
+      <a href="./examples.html">Exemplos</a>
+      <a href="./features.html">Recursos</a>
+      <a href="./pricing.html">Planos</a>
+    </nav>
+    <div class="drawer-divider"></div>
+    <div class="drawer-actions">
+      <a href="./login.html" class="drawer-btn-ghost">Entrar na plataforma</a>
+      <a href="./pricing.html" class="drawer-btn-primary">Começar agora →</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Apresentação principal">
+      <div class="hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow-2" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="pub-container">
+        <div class="hero-inner">
+
+          <!-- Texto do Hero -->
+          <div class="hero-text">
+            <div class="hero-badge" role="status">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              Plataforma 100% brasileira · LGPD compliant
+            </div>
+
+            <h1 class="hero-headline">
+              Sua loja online,<br>
+              do zero ao <span class="text-gradient">topo.</span>
+            </h1>
+
+            <p class="hero-subhead">
+              Monte sua loja em minutos, gerencie produtos e pedidos, personalize o tema, crie campanhas de marketing e acompanhe cada venda — tudo em um painel criado para quem quer crescer de verdade.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="./pricing.html" class="btn-hero-primary">
+                🚀 Criar minha loja grátis
+              </a>
+              <a href="./examples.html" class="btn-hero-secondary">
+                Ver lojas de exemplo →
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="hero-trust-item">
+                <span class="hero-trust-check">✓</span>
+                Sem cartão de crédito
+              </div>
+              <div class="hero-trust-item">
+                <span class="hero-trust-check">✓</span>
+                14 dias grátis
+              </div>
+              <div class="hero-trust-item">
+                <span class="hero-trust-check">✓</span>
+                Cancele quando quiser
+              </div>
+            </div>
+          </div>
+
+          <!-- Mockup Visual do Dashboard -->
+          <div class="hero-visual" aria-hidden="true">
+
+            <!-- Card flutuante topo direito -->
+            <div class="hero-float float-top-right">
+              <span class="float-label">Receita hoje</span>
+              <span class="float-value">R$ 14.890</span>
+              <span class="float-sub">↑ +18,4% vs ontem</span>
+            </div>
+
+            <!-- Dashboard Mockup -->
+            <div class="dashboard-frame">
+              <div class="mockup-topbar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-urlbar">nexa-commerce.app/admin/dashboard</div>
+              </div>
+
+              <div class="mockup-body">
+                <!-- Sidebar -->
+                <div class="mockup-sidebar">
+                  <div class="m-nav-dot active"><div class="m-nav-dot-inner"></div></div>
+                  <div class="m-nav-dot"><div class="m-nav-dot-inner"></div></div>
+                  <div class="m-nav-dot"><div class="m-nav-dot-inner"></div></div>
+                  <div class="m-nav-dot"><div class="m-nav-dot-inner"></div></div>
+                  <div class="m-nav-dot"><div class="m-nav-dot-inner"></div></div>
+                </div>
+
+                <!-- Conteúdo principal -->
+                <div class="mockup-main">
+                  <div class="mockup-header-row">
+                    <div class="m-title-block">
+                      <small>Painel de Operação</small>
+                      <strong>Sala de Comando</strong>
+                    </div>
+                    <div class="m-online-badge">● Online</div>
+                  </div>
+
+                  <div class="mockup-metrics">
+                    <div class="m-metric" style="--m-color: #10b981">
+                      <span>Receita</span>
+                      <strong>R$48K</strong>
+                      <em>+18%</em>
+                    </div>
+                    <div class="m-metric" style="--m-color: #f43f5e">
+                      <span>Pedidos</span>
+                      <strong>386</strong>
+                      <em>+12%</em>
+                    </div>
+                    <div class="m-metric" style="--m-color: #3b82f6">
+                      <span>Conversão</span>
+                      <strong>4.8%</strong>
+                      <em>+0.6%</em>
+                    </div>
+                  </div>
+
+                  <div class="mockup-chart">
+                    <small>Vendas por canal</small>
+                    <div class="m-chart-bars">
+                      <div class="m-bar" style="height:55%"></div>
+                      <div class="m-bar hi" style="height:82%"></div>
+                      <div class="m-bar" style="height:42%"></div>
+                      <div class="m-bar" style="height:68%"></div>
+                      <div class="m-bar hi" style="height:90%"></div>
+                      <div class="m-bar" style="height:58%"></div>
+                      <div class="m-bar" style="height:73%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card flutuante bottom esquerdo -->
+            <div class="hero-float float-bottom-left">
+              <span class="float-label">Novos clientes</span>
+              <span class="float-value">+84</span>
+              <span class="float-sub">essa semana</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SEÇÃO: O que você pode fazer
+         ==================================================================== -->
+    <section class="pub-section" id="o-que-fazer" aria-labelledby="features-title">
+      <div class="pub-container">
+
+        <div class="section-intro centered reveal">
+          <p class="section-eyebrow">Funcionalidades</p>
+          <h2 class="section-title" id="features-title">Tudo que sua loja precisa para crescer</h2>
+          <p class="section-body">Do catálogo de produtos ao relatório de vendas, passando pela personalização do tema e campanhas de marketing — o Nexa Commerce tem cada ferramenta que você precisa.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <div class="feature-card reveal reveal-delay-1" style="--fc-color: #10b981">
+            <div class="feature-icon" style="background:#d1fae5;color:#059669">🏪</div>
+            <h3>Loja personalizada</h3>
+            <p>Monte sua vitrine online com tema próprio, cores da marca, logo e domínio personalizado. Edição visual em tempo real.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-2" style="--fc-color: #3b82f6">
+            <div class="feature-icon" style="background:#dbeafe;color:#2563eb">📦</div>
+            <h3>Gestão de Produtos</h3>
+            <p>Cadastre, organize e gerencie seu catálogo completo. Variantes, estoque, preços e fotos em poucos cliques.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-3" style="--fc-color: #f43f5e">
+            <div class="feature-icon" style="background:#ffe4e6;color:#e11d48">📋</div>
+            <h3>Pedidos em tempo real</h3>
+            <p>Acompanhe cada pedido do pagamento à entrega. Atualização de status automática e notificações ao cliente.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-4" style="--fc-color: #f59e0b">
+            <div class="feature-icon" style="background:#fef3c7;color:#d97706">📊</div>
+            <h3>Dashboard de Vendas</h3>
+            <p>Métricas claras de receita, conversão, ticket médio e canais de aquisição. Gráficos diários, semanais e mensais.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-5" style="--fc-color: #10b981">
+            <div class="feature-icon" style="background:#d1fae5;color:#059669">📣</div>
+            <h3>Marketing e Cupons</h3>
+            <p>Crie campanhas promocionais, cupons de desconto e e-mails de recuperação de carrinho abandonado.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-6" style="--fc-color: #7c3aed">
+            <div class="feature-icon" style="background:#ede9fe;color:#7c3aed">🔗</div>
+            <h3>Integrações futuras</h3>
+            <p>Preparado para integrar pagamentos (Pix, cartão), frete (Correios, transportadoras), ERP e marketplaces.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SEÇÃO: Como funciona — 3 passos
+         ==================================================================== -->
+    <section class="pub-section pub-section-dark" id="como-funciona" aria-labelledby="steps-title">
+      <div class="pub-container">
+
+        <div class="section-intro centered reveal">
+          <p class="section-eyebrow light">Simples assim</p>
+          <h2 class="section-title light" id="steps-title">Sua loja no ar em 3 passos</h2>
+          <p class="section-body light">Nenhum conhecimento técnico necessário. Em menos de 15 minutos você tem uma loja profissional publicada.</p>
+        </div>
+
+        <div class="steps-wrap">
+
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Escolha seu plano</h3>
+              <p>Selecione o plano ideal para seu negócio, crie sua conta e acesse o painel imediatamente. Sem burocracia.</p>
+            </div>
+          </div>
+
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Personalize sua loja</h3>
+              <p>Use o editor visual para definir cores, logo, tipografia e layout. Adicione seus produtos com fotos e preços.</p>
+            </div>
+          </div>
+
+          <div class="step-card reveal reveal-delay-3">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Publique e venda</h3>
+              <p>Com um clique sua loja está no ar. Compartilhe o link, receba pedidos e acompanhe as vendas no dashboard.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SEÇÃO: Estatísticas
+         ==================================================================== -->
+    <section class="pub-section pub-section-dark" id="stats" aria-label="Números da plataforma">
+      <div class="pub-container">
+        <div class="stats-band reveal">
+          <div class="stat-block">
+            <span class="stat-num"><span data-count="12000" data-suffix="+">12.000+</span></span>
+            <span class="stat-desc">Lojas ativas</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num">R$ <span data-count="2.4" data-suffix="M+">2,4M+</span></span>
+            <span class="stat-desc">Em vendas processadas</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num"><span data-count="98.9" data-suffix="%">98,9%</span></span>
+            <span class="stat-desc">Uptime garantido</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num"><span data-count="4.9" data-suffix="★">4,9★</span></span>
+            <span class="stat-desc">Avaliação média</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SEÇÃO: Depoimentos
+         ==================================================================== -->
+    <section class="pub-section pub-section-mid" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="pub-container">
+
+        <div class="section-intro centered reveal">
+          <p class="section-eyebrow">Prova social</p>
+          <h2 class="section-title" id="testimonials-title">Quem usa, recomenda</h2>
+          <p class="section-body">Mais de 12.000 empreendedores brasileiros já confiam no Nexa Commerce para vender online.</p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Em menos de uma hora já tinha minha loja de roupas no ar. O painel é intuitivo demais. Em 3 meses tripliquei as vendas comparado com o marketplace onde vendia antes."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#e11d48,#f43f5e)" aria-hidden="true">C</div>
+              <div>
+                <span class="t-name">Carla Mendes</span>
+                <span class="t-role">Fundadora da Modavibe · São Paulo, SP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Migrei de outro SaaS e a diferença é enorme. Os relatórios de vendas me deram visibilidade que eu nunca tive. Consigo tomar decisões com dados reais agora."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#2563eb,#3b82f6)" aria-hidden="true">R</div>
+              <div>
+                <span class="t-name">Rafael Costa</span>
+                <span class="t-role">CEO da TechZone Eletrônicos · Belo Horizonte, MG</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal reveal-delay-3">
+            <div class="testimonial-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Personalizar a identidade visual da minha loja de cosméticos foi muito mais fácil do que esperava. Minhas clientes adoram o resultado. O suporte é incrível!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#059669,#10b981)" aria-hidden="true">A</div>
+              <div>
+                <span class="t-name">Ana Paula Lima</span>
+                <span class="t-role">Fundadora da GlowSkin · Recife, PE</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CTA FINAL
+         ==================================================================== -->
+    <section class="pub-section cta-final" id="cta-final" aria-labelledby="cta-title">
+      <div class="pub-container">
+        <div class="cta-final-inner reveal">
+          <p class="section-eyebrow light">Pronto para começar?</p>
+          <h2 id="cta-title">Crie sua loja hoje e venda amanhã.</h2>
+          <p>Sem custos iniciais. Sem complexidade técnica. Apenas você, seus produtos e um painel que funciona de verdade.</p>
+          <div class="cta-final-btns">
+            <a href="./pricing.html" class="btn-cta-lg">🚀 Ver planos e preços</a>
+            <a href="./examples.html" class="btn-cta-ghost">Ver exemplos de lojas →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="pub-footer" role="contentinfo">
+    <div class="pub-container">
+      <div class="footer-top">
+
+        <div class="footer-about">
+          <a href="./landing.html" class="pub-brand" style="margin-bottom:0">
+            <div class="pub-brand-mark">N</div>
+            <div class="pub-brand-info">
+              <strong>Nexa Commerce</strong>
+              <span>Plataforma SaaS</span>
+            </div>
+          </a>
+          <p>A plataforma completa para criar, personalizar e gerenciar sua loja online. Feita no Brasil, para empreendedores brasileiros.</p>
+          <div class="footer-social" aria-label="Redes sociais">
+            <a href="#" class="footer-social-btn" aria-label="Instagram">📷</a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Produto">
+          <h5>Produto</h5>
+          <ul>
+            <li><a href="./features.html">Recursos</a></li>
+            <li><a href="./examples.html">Exemplos</a></li>
+            <li><a href="./pricing.html">Planos</a></li>
+            <li><a href="./login.html">Entrar</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Empresa">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Parcerias</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Legal">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">LGPD</a></li>
+            <li><a href="#">Segurança</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Nexa Commerce. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Termos</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./public.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplos de Lojas — Nexa Commerce</title>
+  <meta name="description" content="Veja exemplos de lojas online criadas com o Nexa Commerce. Moda, cosméticos, eletrônicos, decoração, alimentos artesanais e produtos digitais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public.css" />
+  <style>
+    /* Page-specific overrides */
+    .examples-page-hero {
+      background: var(--dark-900);
+      padding: clamp(100px, 14vw, 160px) 0 clamp(60px, 8vw, 80px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .examples-page-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 65%);
+      top: -200px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .examples-page-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%);
+      bottom: -100px;
+      left: -50px;
+      pointer-events: none;
+    }
+
+    .examples-page-hero .pub-container { position: relative; z-index: 1; }
+
+    .examples-filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: 99px;
+      border: 1px solid var(--line);
+      background: var(--bg-white);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover { border-color: var(--green); color: var(--green-dark); }
+    .filter-btn.active { background: var(--green-dark); border-color: var(--green-dark); color: #fff; }
+
+    /* Mini store color themes */
+    .theme-moda { background: linear-gradient(135deg, #1a0612, #3b0920); }
+    .theme-cosmeticos { background: linear-gradient(135deg, #1a0614, #2d0a23); }
+    .theme-eletronicos { background: linear-gradient(135deg, #040e1a, #0a1a38); }
+    .theme-decoracao { background: linear-gradient(135deg, #050f09, #0a2016); }
+    .theme-alimentos { background: linear-gradient(135deg, #140800, #2a1400); }
+    .theme-digital { background: linear-gradient(135deg, #0a0614, #130a28); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="pub-header header-light" id="pubHeader" role="banner">
+    <div class="pub-container">
+      <nav class="pub-nav" aria-label="Navegação principal">
+        <a href="./landing.html" class="pub-brand" aria-label="Nexa Commerce — Início">
+          <div class="pub-brand-mark" aria-hidden="true">N</div>
+          <div class="pub-brand-info">
+            <strong>Nexa Commerce</strong>
+            <span>Plataforma SaaS</span>
+          </div>
+        </a>
+        <ul class="pub-nav-links" role="list">
+          <li><a href="./landing.html">Início</a></li>
+          <li><a href="./examples.html" class="active">Exemplos</a></li>
+          <li><a href="./features.html">Recursos</a></li>
+          <li><a href="./pricing.html">Planos</a></li>
+        </ul>
+        <div class="pub-nav-actions">
+          <a href="./login.html" class="pub-btn-login">Entrar</a>
+          <a href="./pricing.html" class="pub-btn-start">Começar agora →</a>
+        </div>
+        <button class="pub-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Drawer Mobile -->
+  <div class="pub-mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Menu mobile">
+    <nav>
+      <a href="./landing.html">Início</a>
+      <a href="./examples.html">Exemplos</a>
+      <a href="./features.html">Recursos</a>
+      <a href="./pricing.html">Planos</a>
+    </nav>
+    <div class="drawer-divider"></div>
+    <div class="drawer-actions">
+      <a href="./login.html" class="drawer-btn-ghost">Entrar</a>
+      <a href="./pricing.html" class="drawer-btn-primary">Começar agora →</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero da página de exemplos -->
+    <section class="examples-page-hero" aria-labelledby="examples-hero-title">
+      <div class="pub-container">
+        <p class="section-eyebrow light reveal">Galeria de lojas</p>
+        <h1 class="section-title light reveal" id="examples-hero-title" style="margin:0 auto 16px;max-width:700px">
+          Cada negócio com sua identidade.<br>Todas no mesmo painel.
+        </h1>
+        <p class="section-body light reveal" style="margin:0 auto 40px">
+          Veja exemplos de lojas criadas com o Nexa Commerce. Do minimalismo à exuberância — cada uma tem cores, tipografia e experiência únicas.
+        </p>
+        <a href="./pricing.html" class="btn-cta-lg reveal" style="display:inline-flex">🚀 Criar minha loja</a>
+      </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="pub-section" style="padding-top:48px;padding-bottom:0" aria-label="Filtros de categoria">
+      <div class="pub-container">
+        <div class="examples-filter reveal">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="moda">Moda</button>
+          <button class="filter-btn" data-filter="cosmeticos">Cosméticos</button>
+          <button class="filter-btn" data-filter="eletronicos">Eletrônicos</button>
+          <button class="filter-btn" data-filter="decoracao">Decoração</button>
+          <button class="filter-btn" data-filter="alimentos">Alimentos</button>
+          <button class="filter-btn" data-filter="digital">Digital</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de exemplos -->
+    <section class="pub-section" style="padding-top:32px" id="examples-gallery" aria-label="Galeria de exemplos de lojas">
+      <div class="pub-container">
+        <div class="examples-grid" id="examplesGrid">
+
+          <!-- 1. Modavibe - Moda -->
+          <article class="example-card reveal reveal-delay-1" data-category="moda" data-example="modavibe" role="button" tabindex="0" aria-label="Ver exemplo da loja Modavibe">
+            <div class="example-preview theme-moda">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(225,29,72,0.4)">
+                  <span class="mini-store-logo">Modavibe</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(225,29,72,0.3),transparent)">
+                  <span class="mini-hero-eyebrow">Coleção Outono 2026</span>
+                  <span class="mini-hero-title">Moda que<br>conta histórias.</span>
+                  <span class="mini-hero-cta">Explorar coleção</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#e11d4888,#e11d4844)">
+                    <span class="mini-product-price">R$ 149</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#be123c88,#be123c44)">
+                    <span class="mini-product-price">R$ 89</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#9f123688,#9f123644)">
+                    <span class="mini-product-price">R$ 199</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#ffe4e6;color:#e11d48">👗 Moda & Vestuário</span>
+              <h2 class="example-name">Modavibe</h2>
+              <p class="example-desc">Boutique de moda contemporânea com layout minimalista, foco em fotografia e experiência de compra fluida.</p>
+            </div>
+          </article>
+
+          <!-- 2. GlowSkin - Cosméticos -->
+          <article class="example-card reveal reveal-delay-2" data-category="cosmeticos" data-example="glowskin" role="button" tabindex="0" aria-label="Ver exemplo da loja GlowSkin">
+            <div class="example-preview theme-cosmeticos">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(236,72,153,0.35)">
+                  <span class="mini-store-logo">GlowSkin</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(236,72,153,0.25),transparent)">
+                  <span class="mini-hero-eyebrow">Beleza natural</span>
+                  <span class="mini-hero-title">Seu brilho,<br>sua rotina.</span>
+                  <span class="mini-hero-cta" style="background:#ec4899;color:#fff">Descobrir</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#ec489966,#be185d44)">
+                    <span class="mini-product-price">R$ 79</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#f472b666,#ec489944)">
+                    <span class="mini-product-price">R$ 55</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#db277766,#ec489944)">
+                    <span class="mini-product-price">R$ 129</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#fce7f3;color:#be185d">💄 Cosméticos & Beleza</span>
+              <h2 class="example-name">GlowSkin</h2>
+              <p class="example-desc">Marca de cosméticos naturais com identidade visual suave e premium. Quiz de pele, rotinas personalizadas e avaliações com fotos.</p>
+            </div>
+          </article>
+
+          <!-- 3. TechZone - Eletrônicos -->
+          <article class="example-card reveal reveal-delay-3" data-category="eletronicos" data-example="techzone" role="button" tabindex="0" aria-label="Ver exemplo da loja TechZone">
+            <div class="example-preview theme-eletronicos">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(37,99,235,0.5)">
+                  <span class="mini-store-logo">TechZone</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(37,99,235,0.3),transparent)">
+                  <span class="mini-hero-eyebrow">Tecnologia de ponta</span>
+                  <span class="mini-hero-title">Gadgets que<br>transformam.</span>
+                  <span class="mini-hero-cta" style="background:#2563eb;color:#fff">Explorar</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#2563eb66,#1e40af44)">
+                    <span class="mini-product-price">R$ 899</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#3b82f666,#2563eb44)">
+                    <span class="mini-product-price">R$ 399</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#1e40af66,#1d4ed844)">
+                    <span class="mini-product-price">R$ 1.299</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#dbeafe;color:#1d4ed8">⚡ Eletrônicos & Tech</span>
+              <h2 class="example-name">TechZone</h2>
+              <p class="example-desc">Plataforma de eletrônicos com comparativos técnicos, especificações detalhadas e suporte especializado para o comprador exigente.</p>
+            </div>
+          </article>
+
+          <!-- 4. CasaVerde - Decoração -->
+          <article class="example-card reveal reveal-delay-4" data-category="decoracao" data-example="casaverde" role="button" tabindex="0" aria-label="Ver exemplo da loja CasaVerde">
+            <div class="example-preview theme-decoracao">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(5,150,105,0.4)">
+                  <span class="mini-store-logo">CasaVerde</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(5,150,105,0.3),transparent)">
+                  <span class="mini-hero-eyebrow">Decoração sustentável</span>
+                  <span class="mini-hero-title">Espaços que<br>respiram.</span>
+                  <span class="mini-hero-cta" style="background:#059669;color:#fff">Descobrir</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#05966966,#04785444)">
+                    <span class="mini-product-price">R$ 249</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#10b98166,#05966944)">
+                    <span class="mini-product-price">R$ 189</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#06795766,#05966944)">
+                    <span class="mini-product-price">R$ 399</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#d1fae5;color:#065f46">🌿 Decoração & Casa</span>
+              <h2 class="example-name">CasaVerde</h2>
+              <p class="example-desc">Decoração sustentável e artesanal com storytelling dos produtores locais. Visual orgânico e inspirador para cada ambiente.</p>
+            </div>
+          </article>
+
+          <!-- 5. ArteSabor - Alimentos -->
+          <article class="example-card reveal reveal-delay-5" data-category="alimentos" data-example="artesabor" role="button" tabindex="0" aria-label="Ver exemplo da loja ArteSabor">
+            <div class="example-preview theme-alimentos">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(217,119,6,0.45)">
+                  <span class="mini-store-logo">ArteSabor</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(217,119,6,0.35),transparent)">
+                  <span class="mini-hero-eyebrow">Sabores regionais</span>
+                  <span class="mini-hero-title">Da terra para<br>sua mesa.</span>
+                  <span class="mini-hero-cta" style="background:#d97706;color:#fff">Ver cestas</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#d9770666,#b4580544)">
+                    <span class="mini-product-price">R$ 68</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#f59e0b66,#d9770644)">
+                    <span class="mini-product-price">R$ 45</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#b4580566,#d9770644)">
+                    <span class="mini-product-price">R$ 129</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#fef3c7;color:#92400e">🍃 Alimentos Artesanais</span>
+              <h2 class="example-name">ArteSabor</h2>
+              <p class="example-desc">Marketplace de alimentos artesanais regionais com foco em produtores locais, cestas personalizadas e entrega refrigerada.</p>
+            </div>
+          </article>
+
+          <!-- 6. DigitalPro - Digital -->
+          <article class="example-card reveal reveal-delay-6" data-category="digital" data-example="digitalpro" role="button" tabindex="0" aria-label="Ver exemplo da loja DigitalPro">
+            <div class="example-preview theme-digital">
+              <div class="mini-store">
+                <div class="mini-store-header" style="background:rgba(124,58,237,0.45)">
+                  <span class="mini-store-logo">DigitalPro</span>
+                  <div class="mini-nav-dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="mini-store-hero" style="background:linear-gradient(135deg,rgba(124,58,237,0.35),transparent)">
+                  <span class="mini-hero-eyebrow">Infoprodutos premium</span>
+                  <span class="mini-hero-title">Conteúdo que<br>transforma.</span>
+                  <span class="mini-hero-cta" style="background:#7c3aed;color:#fff">Ver produtos</span>
+                </div>
+                <div class="mini-product-grid">
+                  <div class="mini-product" style="background:linear-gradient(135deg,#7c3aed66,#5b21b644)">
+                    <span class="mini-product-price">R$ 197</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#8b5cf666,#7c3aed44)">
+                    <span class="mini-product-price">R$ 97</span>
+                  </div>
+                  <div class="mini-product" style="background:linear-gradient(135deg,#6d28d966,#7c3aed44)">
+                    <span class="mini-product-price">R$ 497</span>
+                  </div>
+                </div>
+              </div>
+              <div class="example-hover-overlay">
+                <button class="example-view-label">Ver exemplo completo</button>
+              </div>
+            </div>
+            <div class="example-meta">
+              <span class="example-pill" style="background:#ede9fe;color:#5b21b6">💻 Produtos Digitais</span>
+              <h2 class="example-name">DigitalPro</h2>
+              <p class="example-desc">Plataforma de cursos, templates e ebooks para profissionais criativos. Download automático, acesso vitalício e licenças flexíveis.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Conversão -->
+    <section class="pub-section cta-final" aria-labelledby="examples-cta-title">
+      <div class="pub-container">
+        <div class="cta-final-inner reveal">
+          <p class="section-eyebrow light">Sua vez</p>
+          <h2 id="examples-cta-title">Qual será a identidade<br>da sua loja?</h2>
+          <p>Com o Nexa Commerce, você personaliza cada detalhe: cores, tipografia, layout e conteúdo. Sem precisar de um designer.</p>
+          <div class="cta-final-btns">
+            <a href="./pricing.html" class="btn-cta-lg">🚀 Escolher meu plano</a>
+            <a href="./features.html" class="btn-cta-ghost">Ver todos os recursos →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Exemplo -->
+  <div class="pub-modal-bg" id="examplesModalBg" aria-hidden="true" aria-modal="true" role="dialog" aria-label="Detalhes do exemplo">
+    <div class="pub-modal" id="examplesModal">
+      <div class="modal-preview-zone">
+        <button class="modal-close" aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-store-title">Nome da Loja</h2>
+        <p class="modal-store-desc">Descrição da loja.</p>
+        <div class="modal-tags"></div>
+        <div class="modal-footer-actions">
+          <a href="./pricing.html" class="btn-modal-cta modal-cta-link">🚀 Quero criar uma loja assim</a>
+          <button class="btn-modal-secondary" onclick="document.getElementById('examplesModalBg').classList.remove('open')">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pub-footer" role="contentinfo">
+    <div class="pub-container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="./landing.html" class="pub-brand">
+            <div class="pub-brand-mark">N</div>
+            <div class="pub-brand-info"><strong>Nexa Commerce</strong><span>Plataforma SaaS</span></div>
+          </a>
+          <p>A plataforma completa para criar, personalizar e gerenciar sua loja online.</p>
+        </div>
+        <nav class="footer-col" aria-label="Produto">
+          <h5>Produto</h5>
+          <ul>
+            <li><a href="./features.html">Recursos</a></li>
+            <li><a href="./examples.html">Exemplos</a></li>
+            <li><a href="./pricing.html">Planos</a></li>
+            <li><a href="./login.html">Entrar</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Empresa">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Legal">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">LGPD</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nexa Commerce. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Termos</a>
+          <a href="#">Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./public.js"></script>
+  <script>
+    // Filtro de exemplos por categoria
+    (function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.example-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+          cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Suporte a teclado nos cards de exemplo
+      cards.forEach(card => {
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

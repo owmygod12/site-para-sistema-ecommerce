@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexa Commerce - Painel de Operações SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./store-preview.css" />
+  </head>
+  <body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <div class="brand-lockup-mobile">
+        <div class="brand-mark-small" aria-hidden="true">N</div>
+        <strong>Nexa Commerce</strong>
+      </div>
+      <button class="mobile-action-btn" id="mobilePublishBtn" title="Publicar loja" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </button>
+    </header>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Navegacao principal">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">N</div>
+          <div>
+            <strong>Nexa Commerce</strong>
+            <span>Plataforma SaaS</span>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Areas do sistema">
+          <button class="nav-item active" data-view="dashboard" type="button">
+            <span class="nav-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+            </span>
+            Visão geral
+          </button>
+          <button class="nav-item" data-view="storefront" type="button">
+            <span class="nav-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </span>
+            Loja online
+          </button>
+          <button class="nav-item" data-view="products" type="button">
+            <span class="nav-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </span>
+            Produtos
+          </button>
+          <button class="nav-item" data-view="orders" type="button">
+            <span class="nav-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </span>
+            Pedidos
+          </button>
+          <button class="nav-item" data-view="marketing" type="button">
+            <span class="nav-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+            </span>
+            Marketing
+          </button>
+        </nav>
+
+        <div class="store-card">
+          <span class="status-dot"></span>
+          <div>
+            <strong>atelier-norte.com</strong>
+            <p>Checkout ativo em 4 países</p>
+          </div>
+        </div>
+
+        <button class="nav-item logout-btn" id="logoutBtn" type="button" style="color: var(--coral); border: 1px solid transparent; background: transparent; padding: 12px 14px; margin-top: -16px; display: flex; align-items: center; gap: 12px; font-weight: 500; font-size: 14px; width: 100%; transition: var(--transition);">
+          <span class="nav-icon" aria-hidden="true" style="color: var(--coral); display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          </span>
+          Sair
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Painel de operação</p>
+            <h1>Uma loja pronta para vender, medir e crescer.</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <input id="globalSearch" type="search" placeholder="Buscar pedido, cliente ou produto..." />
+            </label>
+            <button class="icon-button" title="Notificações" aria-label="Notificações" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </button>
+            <button class="primary-action" id="publishButton" type="button">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+              Publicar loja
+            </button>
+          </div>
+        </header>
+
+        <section class="view active" id="dashboard" aria-labelledby="dashboardTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Hoje</p>
+              <h2 id="dashboardTitle">Sala de comando</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="Período">
+              <button class="active" data-range="today" type="button">Dia</button>
+              <button data-range="week" type="button">Semana</button>
+              <button data-range="month" type="button">Mês</button>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="metric-tile">
+              <span class="metric-label">Receita</span>
+              <strong id="revenueMetric">R$ 48.920</strong>
+              <small class="trend positive">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                +18,4% vs. período anterior
+              </small>
+              <div class="metric-sparkline" aria-hidden="true">
+                <svg viewBox="0 0 100 30" width="100%" height="32" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"></stop>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,25 L15,22 L30,28 L45,15 L60,19 L75,8 L90,12 L100,5" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"></path>
+                  <path d="M0,25 L15,22 L30,28 L45,15 L60,19 L75,8 L90,12 L100,5 L100,30 L0,30 Z" fill="url(#grad-green)" stroke="none"></path>
+                </svg>
+              </div>
+            </article>
+            <article class="metric-tile accent-coral">
+              <span class="metric-label">Pedidos</span>
+              <strong id="ordersMetric">386</strong>
+              <small class="trend warning">72 aguardando envio</small>
+              <div class="metric-sparkline" aria-hidden="true">
+                <svg viewBox="0 0 100 30" width="100%" height="32" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.3"></stop>
+                      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,28 L15,25 L30,18 L45,22 L60,10 L75,15 L90,5 L100,8" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"></path>
+                  <path d="M0,28 L15,25 L30,18 L45,22 L60,10 L75,15 L90,5 L100,8 L100,30 L0,30 Z" fill="url(#grad-coral)" stroke="none"></path>
+                </svg>
+              </div>
+            </article>
+            <article class="metric-tile accent-blue">
+              <span class="metric-label">Conversão</span>
+              <strong id="conversionMetric">4,8%</strong>
+              <small class="trend info">Checkout expresso lidera</small>
+              <div class="metric-sparkline" aria-hidden="true">
+                <svg viewBox="0 0 100 30" width="100%" height="32" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"></stop>
+                      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,20 L15,18 L30,22 L45,12 L60,15 L75,10 L90,12 L100,6" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"></path>
+                  <path d="M0,20 L15,18 L30,22 L45,12 L60,15 L75,10 L90,12 L100,6 L100,30 L0,30 Z" fill="url(#grad-blue)" stroke="none"></path>
+                </svg>
+              </div>
+            </article>
+            <article class="metric-tile accent-gold">
+              <span class="metric-label">Ticket médio</span>
+              <strong id="ticketMetric">R$ 126,74</strong>
+              <small class="trend positive">+R$ 14 por upsell</small>
+              <div class="metric-sparkline" aria-hidden="true">
+                <svg viewBox="0 0 100 30" width="100%" height="32" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="grad-gold" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"></stop>
+                      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,22 L15,20 L30,24 L45,18 L60,14 L75,10 L90,12 L100,8" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"></path>
+                  <path d="M0,22 L15,20 L30,24 L45,18 L60,14 L75,10 L90,12 L100,8 L100,30 L0,30 Z" fill="url(#grad-gold)" stroke="none"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel analytics-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Analytics</p>
+                  <h3>Vendas por canal</h3>
+                </div>
+                <button class="ghost-button" type="button">Exportar</button>
+              </div>
+              <div class="chart" aria-label="Gráfico de vendas por canal">
+                <div class="chart-grid-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="chart-column" style="--height: 58%">
+                  <div class="chart-tooltip">58%</div>
+                  <span></span>
+                  <label>Busca</label>
+                </div>
+                <div class="chart-column coral" style="--height: 86%">
+                  <div class="chart-tooltip">86%</div>
+                  <span></span>
+                  <label>Social</label>
+                </div>
+                <div class="chart-column blue" style="--height: 44%">
+                  <div class="chart-tooltip">44%</div>
+                  <span></span>
+                  <label>E-mail</label>
+                </div>
+                <div class="chart-column gold" style="--height: 72%">
+                  <div class="chart-tooltip">72%</div>
+                  <span></span>
+                  <label>Direto</label>
+                </div>
+                <div class="chart-column ink" style="--height: 64%">
+                  <div class="chart-tooltip">64%</div>
+                  <span></span>
+                  <label>Afiliados</label>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Fila critica</p>
+                  <h3>Proximas acoes</h3>
+                </div>
+                <button class="icon-button small" title="Adicionar acao" aria-label="Adicionar acao">＋</button>
+              </div>
+              <div class="task-list">
+                <label>
+                  <input type="checkbox" />
+                  <span>Repor mochila Terra em 2 variantes</span>
+                </label>
+                <label>
+                  <input type="checkbox" checked />
+                  <span>Sincronizar catalogo com marketplace</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>Aprovar campanha de carrinho abandonado</span>
+                </label>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="storefront" aria-labelledby="storefrontTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Gerenciador de Temas</p>
+              <h2 id="storefrontTitle">Loja online</h2>
+            </div>
+            <a href="./store-editor.html" class="primary-action" id="goToEditorBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+              Editar loja
+            </a>
+          </div>
+
+          <div class="builder-layout storefront-landing">
+            <!-- Gerenciamento de Rascunhos e Publicações -->
+            <section class="panel theme-status-panel">
+              <div class="theme-card-premium">
+                <div class="theme-thumbnail" aria-hidden="true">
+                  <div class="bag-shape-mini">
+                    <div class="bag-handle-mini"></div>
+                  </div>
+                </div>
+                <div class="theme-details">
+                  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                    <span class="pill" style="margin-bottom: 0;">Tema Ativo</span>
+                    <span id="landingPaletteDot" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: #0f5132; border: 1px solid rgba(255,255,255,0.1);"></span>
+                  </div>
+                  <h3 id="landingThemeName">Coleção Travessia</h3>
+                  <p class="muted">Publicado: Hoje às 12:44</p>
+                  
+                  <div class="theme-actions">
+                    <a href="./store-editor.html" class="primary-action edit-theme-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon></svg>
+                      Personalizar
+                    </a>
+                    <button class="secondary-action" id="themeActionsBtn" type="button">Ações</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Configurações de Integração de Temas -->
+              <div class="theme-summary-grid">
+                <div class="summary-tile">
+                  <span class="tile-label">Checkout</span>
+                  <strong id="landingCheckoutStatus">Expresso (Ativo)</strong>
+                </div>
+                <div class="summary-tile">
+                  <span class="tile-label">Desconto</span>
+                  <strong id="landingDiscountStatus">12% acima de R$ 300</strong>
+                </div>
+                <div class="summary-tile">
+                  <span class="tile-label">Moeda Base</span>
+                  <strong>BRL (R$)</strong>
+                </div>
+              </div>
+            </section>
+
+            <!-- Preview da Loja Online -->
+            <section class="store-preview" aria-label="Preview da loja">
+              <div class="browser-frame">
+                <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <span>atelier-norte.com</span>
+              </div>
+              <div class="shop-window" id="shopWindow">
+                <header>
+                  <strong id="landingShopLogo">Atelier Norte</strong>
+                  <nav aria-label="Menu da loja">
+                    <a>Novidades</a>
+                    <a>Casa</a>
+                    <a>Viagem</a>
+                  </nav>
+                  <button type="button">Comprar</button>
+                </header>
+                <div class="shop-hero">
+                  <div>
+                    <p>Lançamento</p>
+                    <h3 id="campaignTitle">Coleção Lançamento</h3>
+                    <span id="checkoutBadge">Checkout expresso ativo</span>
+                  </div>
+                  <div class="hero-product" aria-hidden="true">
+                    <div class="bag-shape"></div>
+                  </div>
+                </div>
+                <div class="product-strip">
+                  <article>
+                    <div class="product-art clay"></div>
+                    <strong>Mochila Terra</strong>
+                    <span>R$ 289</span>
+                  </article>
+                  <article>
+                    <div class="product-art leaf"></div>
+                    <strong>Luminária Dobra</strong>
+                    <span>R$ 169</span>
+                  </article>
+                  <article>
+                    <div class="product-art blue"></div>
+                    <strong>Kit Studio</strong>
+                    <span>R$ 339</span>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="products" aria-labelledby="productsTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Catalogo</p>
+              <h2 id="productsTitle">Produtos</h2>
+            </div>
+            <button class="primary-action" id="newProductButton"><span>＋</span>Novo produto</button>
+          </div>
+
+          <section class="panel">
+            <div class="table-toolbar">
+              <label class="search-box compact">
+                <span class="search-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input id="productSearch" type="search" placeholder="Filtrar catálogo..." />
+              </label>
+              <div class="select-wrapper">
+                <select id="stockFilter" aria-label="Filtrar estoque">
+                  <option value="all">Todos os estoques</option>
+                  <option value="low">Estoque baixo</option>
+                  <option value="ok">Estoque saudável</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="product-table-container">
+              <div class="product-table-header" aria-hidden="true">
+                <div class="col-thumb">Foto</div>
+                <div class="col-info">Produto</div>
+                <div class="col-price">Preço</div>
+                <div class="col-stock">Estoque</div>
+                <div class="col-actions">Ações</div>
+              </div>
+              <div class="product-table" id="productTable" role="table" aria-label="Produtos cadastrados"></div>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="orders" aria-labelledby="ordersTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Operação</p>
+              <h2 id="ordersTitle">Pedidos</h2>
+            </div>
+            <button class="secondary-action" id="batchButton" type="button">Gerar etiquetas</button>
+          </div>
+
+          <div class="orders-layout">
+            <div class="orders-scrim" id="ordersScrim" aria-hidden="true"></div>
+            <section class="panel orders-list-panel">
+              <div class="order-list" id="orderList"></div>
+            </section>
+            <aside class="panel order-detail" id="orderDetail" aria-live="polite"></aside>
+          </div>
+        </section>
+
+        <section class="view" id="marketing" aria-labelledby="marketingTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Crescimento</p>
+              <h2 id="marketingTitle">Marketing</h2>
+            </div>
+            <button class="primary-action" id="launchCampaign"><span>✦</span>Lancar campanha</button>
+          </div>
+
+          <div class="campaign-grid">
+            <article class="campaign-card">
+              <span class="campaign-icon">↺</span>
+              <strong>Carrinho abandonado</strong>
+              <p>Sequencia com cupom dinamico e recomendacao por margem.</p>
+              <div class="progress-line"><span style="width: 76%"></span></div>
+            </article>
+            <article class="campaign-card">
+              <span class="campaign-icon">◇</span>
+              <strong>Clientes VIP</strong>
+              <p>Segmento com 1.248 clientes e ticket medio acima de R$ 240.</p>
+              <div class="progress-line coral"><span style="width: 54%"></span></div>
+            </article>
+            <article class="campaign-card">
+              <span class="campaign-icon">◍</span>
+              <strong>Bundles inteligentes</strong>
+              <p>Oferta automatica combina produtos com alta afinidade.</p>
+              <div class="progress-line blue"><span style="width: 63%"></span></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./api.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
